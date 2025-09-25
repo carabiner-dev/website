@@ -1,0 +1,247 @@
+baseURL: http://carabiner.dev/
+languageCode: en-us
+title: Carabiner Systems, Inc
+
+module:
+  # uncomment line below for local development of module
+  # workspace: hugo.work
+  imports:
+    - path: github.com/jgthms/bulma
+      mounts:
+      - source: bulma.sass
+        target: assets/bulma/bulma.sass
+      - source: bulma-rtl.sass
+        target: assets/bulma/bulma-rtl.sass
+      - source: sass
+        target: assets/bulma/sass
+      - source: sass/base
+        target: assets/bulma/sass/base
+      - source: sass/components
+        target: assets/bulma/sass/components
+      - source: sass/elements
+        target: assets/bulma/sass/elements
+      - source: sass/form
+        target: assets/bulma/sass/form
+      - source: sass/grid
+        target: assets/bulma/sass/grid
+      - source: sass/helpers
+        target: assets/bulma/sass/helpers
+      - source: sass/layout
+        target: assets/bulma/sass/layout
+      - source: sass/utilities
+        target: assets/bulma/sass/utilities
+    # - path: github.com/FortAwesome/Font-Awesome
+    #   mounts:
+    #   - source: scss
+    #     target: assets/sass/fontawesome
+    #   - source: webfonts
+    #     target: static/webfonts
+    
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+googleAnalytics: # Put in your tracking code without quotes like this: UA-XXX for universal tracking or G-XXX analytics v4 tracking
+# Disables warnings
+disableKinds:
+- taxonomy
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allows you to write raw html in your md files
+
+params:
+  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+  openGraph: true
+  # Used as meta data; describe your site to make Google Bots happy
+  description:
+  # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
+  # preloader: false
+  navbarlogo:
+  # Logo (from static/images/logos/___)
+    image: logos/carabiner-terrablack.svg
+    link: /
+    # Default width/height. Uncomment if you need to change
+    width: 150
+    height: 55
+  font:
+    name: "Ubuntu"
+    sizes: [400,600]
+  hero:
+    # Main hero title
+    title: Secure software.
+    title2: From every push. 
+    # Hero subtitle (optional)
+    subtitle: Carabiner Systems is working on a developer friendly platform to harden software from push to deployment.
+    subtitlesub: Built on open source security technologies.
+    # Button text
+    buttontext: Our Projects
+    # Where the main hero button links to
+    buttonlink: "/projects/"
+    # Hero image (from static/images/___)
+    image: lina-working-hero-crop.png
+    # Footer logos (from static/images/logos/clients/*.svg)
+    # urls are optional
+    clientlogos:
+    - logo: sigstore
+      url: https://sigstore.dev
+    - logo: in-toto
+      url: https://intoto.dev
+    - logo: slsa
+      url: https://slsa.dev
+    - logo: protobom
+      url: https://protobom.dev
+    - logo: spdx
+      url: https://spdx.dev
+    - logo: cyclonedx
+      url: https://cyclonedx.org
+    - logo: openvex
+      url: https://openvex.org
+  navbar:
+  - title: Projects
+    url: /projects/
+  # - title: Blog
+  #   url: /blog/
+  - title: About Us
+    url: /about/
+  # - title: More
+  #   sublinks:
+  #   - title: Contact Us
+  #     url: /
+  #   - title: Dropdown item
+  #     url: /
+  #   - title: Dropdown item
+  #     url: /
+  # - title: Log in
+  #   url: /
+  # - title: Sign up
+  #   url: /
+  #   button: true
+
+  # sidebar:
+  #   # Logo (from static/images/logos/___.svg)
+  #   logo: fresh-square
+  #   sections:
+  #   - title: User
+  #     icon: user
+  #     links:
+  #     - text: Profile
+  #       url: /
+  #     - text: Account
+  #       url: /
+  #     - text: Settings
+  #       url: /
+  #   - title: Messages
+  #     icon: envelope
+  #     links:
+  #     - text: Inbox
+  #       url: /
+  #     - text: Compose
+  #       url: /
+  #   - title: Images
+  #     icon: image
+  #     links:
+  #     - text: Library
+  #       url: /
+  #     - text: Upload
+  #       url: /
+  #   - title: Settings
+  #     icon: cog
+  #     links:
+  #     - text: User settings
+  #       url: /
+  #     - text: App settings
+  #       url: /
+  # section1:
+  #   title: The Carabiner Platform
+  #   subtitle: 
+  #   tiles:
+  #   - title: Observe
+  #     icon: mouse-globe
+  #     text: Monitor the activity on your build systems
+  #     url: /
+  #     buttonText: Guide
+  #   - title: Guide
+  #     icon: laptop-cloud
+  #     text: Meet compliance goals based and best practices
+  #     url: /
+  #     buttonText: Protect
+  #   - title: Protect
+  #     icon: plug-cloud
+  #     text: Harden critical points of the SDLC
+  #     url: /
+  #     buttonText: Get started
+  # section2:
+  #   title: You're here because you want the best
+  #   subtitle: And we know it
+  #   features:
+  #   - title: Powerful and unified interface
+  #     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+  #     # Icon (from static/images/illustrations/icons/___.svg)
+  #     icon: laptop-globe
+  #   - title: Cross-device synchronisation
+  #     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+  #     icon: doc-sync
+  #   - title: Nomad system
+  #     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+  #     icon: mobile-feed
+  # section3:
+  #   title: One platform
+  #   subtitle: To rule them all
+  #   image: illustrations/mockups/app-mockup.png
+  #   buttonText: Get started
+  #   buttonLink: "#"
+  # section4:
+  #   title: Our Clients love us!
+  #   subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
+  #   clients:
+  #   - name: Irma Walters
+  #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+  #     job: Accountant
+  #     img: 1
+  #   - name: John Bradley
+  #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+  #     job: Financial Analyst
+  #     img: 2
+  #   - name: Gary Blackman
+  #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+  #     job: HR Manager
+  #     img: 3
+  # section5:
+  #   title: Drop us a line or two
+  #   subtitle: We'd love to hear from you
+  #   buttonText: Send Message
+  #   # action: https://formspree.io/f/<form_id>
+  #   # method: POST
+  footer:
+    # Logo (from static/images/logos/___)
+    logo: carabiner-orangewhite-full.svg
+    
+    # Social Media Title
+    socialmediatitle: Follow Us
+    
+    quicklinks:
+      column1:
+        title: "Our Projects"
+        links:
+        - text: 🔴🟡🟢 AMPEL
+          link: /projects
+      # column2:
+      #   title: "Docs"
+      #   links:
+      #   - text: Get started
+      #     link: /
+      #   - text: User guides
+      #     link: /
+      #   - text: Admin guide
+      #     link: /
+      #   - text: Developers
+      #     link: /
+      # column3:
+      #   title: "Blog"
+      #   links:
+      #   - text: Latest news
+      #     link: /blog/first
+      #   - text: Tech articles
+      #     link: /blog/second
