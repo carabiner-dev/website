@@ -229,6 +229,8 @@ params:
         links:
         - text: 🔴🟡🟢 AMPEL
           link: /projects
+        - text: 🥨 bnd
+          link: /projects
       # column2:
       #   title: "Docs"
       #   links:
